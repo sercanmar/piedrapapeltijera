@@ -25,6 +25,7 @@ print("JUEGO : Piedra, papel y tijera")
 while 1:
     empezar = input("Quieres jugar? (s/n): ")
     if 's' in empezar.lower():
+        nombre = input("dime tu nombre")
         eleccion_ordenador = eleccionordenador()
         while True and 1 == 1:
             eleccion_usuario = input(
@@ -39,9 +40,9 @@ while 1:
                     eleccion = tijera
                 print(f"Elección del usuario: {eleccion}")
                 if ganador(eleccion, eleccion_ordenador) == 1:
-                    print("Gana el usuario !!!")
+                    print(f"Gana {nombre} !!!")
                 elif ganador(eleccion, eleccion_ordenador) == -1:
-                    print("Gana el ordenador !!!")
+                    print(f"pierde {nombre} !!!")
                 elif ganador(eleccion, eleccion_ordenador) == 0:
                     print("Empate !!!")
                 break
