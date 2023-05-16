@@ -1,4 +1,5 @@
 import random
+import sys
 
 piedra = 'piedra'
 papel = 'papel'
@@ -26,9 +27,12 @@ while 1:
     empezar = input("Quieres jugar? (s/n): ")
     if 's' in empezar.lower():
         eleccion_ordenador = eleccionordenador()
-        while True and 1 == 1:
+        while True:
             eleccion_usuario = input(
                 "Selecciona un movimiento ('p' para piedra / 'a' para papel / 't' para tijeras): ").lower()
+            if eleccion_usuario == "TERMINAR" or "terminar":
+                print("Tienes miedo?")
+                sys.exit()
             print(f"Elección del ordenador: {eleccion_ordenador}")
             if 'p' or 'a' or 't' or 'p' or 'a' or 't' in eleccion_usuario:
                 if 'p' in eleccion_usuario:
